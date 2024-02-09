@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('video');
 
+    
     // Request access to the webcam.
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia({ video: true })
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const red = data[i];
                     const green = data[i + 1];
                     const blue = data[i + 2];
-                    if (red > 200 && green > 200 && blue < 50) {
+                    if (red > 255 && green > 220 && blue < 50) {
                         window.location.href = 'https://effectizationstudio.com'; // Change to your desired URL
                         return; // Exit the function after redirecting
                     }

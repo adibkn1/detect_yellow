@@ -1,15 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('video');
+    video.controls = false; // Ensure controls are not displayed
 
-    // Request access to the webcam.
+    const constraints = {
+        video: {
+            facingMode: 'environment' // Attempt to use the back camera
+        }
+    };
+
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true })
+        navigator.mediaDevices.getUserMedia(constraints)
             .then(stream => {
                 video.srcObject = stream;
                 video.play();
             })
             .catch(err => console.error("Error accessing the camera:", err));
     }
+});
 
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');

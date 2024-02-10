@@ -1,9 +1,26 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Yellow Object Detector</title>
+    <title>Fullscreen Video</title>
+    <style>
+        /* Ensure the body and html tags take up the full viewport height and width */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide scrollbars */
+        }
+        /* Make the video fill the entire screen */
+        #video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover; /* Ensure the aspect ratio is maintained while covering the full screen */
+            transform: scaleX(-1); /* Mirror the video, if needed */
+        }
+    </style>
 </head>
 <body>
-    <video id="video" width="100%" height="100%" autoplay></video>
+    <video id="video" autoplay playsinline muted></video>
     <script src="script.js"></script>
 </body>
 </html>

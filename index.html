@@ -1,45 +1,9 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Fullscreen Video</title>
-    <style>
-        /* Ensure the body and html tags take up the full viewport height and width */
-        body, html {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Hide scrollbars */
-        }
-        /* Make the video fill the entire screen */
-        #video {
-            height: 100%;
-            width: 100%;
-            object-fit: cover; /* Ensure the aspect ratio is maintained while covering the full screen */
-        }
-    </style>
+    <title>Yellow Object Detector</title>
 </head>
 <body>
-    <video id="video" autoplay playsinline muted></video>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('video');
-            video.controls = false; // Ensure controls are not displayed
-
-            const constraints = {
-                video: {
-                    facingMode: 'environment' // Attempt to use the back camera
-                }
-            };
-
-            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-                navigator.mediaDevices.getUserMedia(constraints)
-                    .then(stream => {
-                        video.srcObject = stream;
-                        video.play();
-                    })
-                    .catch(err => console.error("Error accessing the camera:", err));
-            }
-        });
-    </script>
+    <video id="video" width="640" height="480" autoplay ;"></video>
+    <script src="script.js"></script>
 </body>
 </html>

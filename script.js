@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function adjustVideoStyle() {
-        if (window.innerHeight > window.innerWidth) {
+        if (window.innerHeight > window.innerWidth) { 
             video.style.width = 'auto';
             video.style.height = '100vh';
             video.style.objectFit = 'cover';

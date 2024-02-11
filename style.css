@@ -13,5 +13,26 @@ body, html {
 #cameraFeed {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+}
+
+/* Existing styles */
+
+#switchCameraBtn {
+    position: fixed;
+    bottom: 20px; /* Distance from bottom */
+    right: 20px; /* Distance from right */
+    background-color: transparent; /* No background */
+    border: none; /* No border */
+    padding: 0; /* Reset padding */
+    cursor: pointer;
+}
+
+#switchCameraBtn img {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    transition: transform 0.2s ease; /* Smooth transition for hover effect */
+}
+
+#switchCameraBtn:hover img {
+    transform: scale(1.1); /* Slightly enlarge on hover for a visual feedback */
 }

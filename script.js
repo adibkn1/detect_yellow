@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('cameraFeed');
-    video.controls = false; // Ensure controls are not displayed
-    document.getElementById('cameraFeed').addEventListener('touchstart', function(e) {
-        e.preventDefault();
-        // Optionally, trigger play if not already playing
-        if (this.paused) {
-            this.play();
-        }
-    });
-        const switchCameraBtn = document.getElementById('switchCameraBtn');
+    const switchCameraBtn = document.getElementById('switchCameraBtn');
     let currentStream = null;
     let useFrontCamera = false; // Start with the front camera
     let analyzing = false; // Flag to prevent multiple simultaneous analyses

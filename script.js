@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('cameraFeed');
+    video.controls = false; // Ensure controls are not displayed
+
     const switchCameraBtn = document.getElementById('switchCameraBtn');
     let currentStream = null;
     let useFrontCamera = true; // Start with the front camera

@@ -8,10 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
             this.play();
         }
     });
-    
-    const switchCameraBtn = document.getElementById('switchCameraBtn');
+        const switchCameraBtn = document.getElementById('switchCameraBtn');
     let currentStream = null;
-    let useFrontCamera = true; // Start with the front camera
+    let useFrontCamera = false; // Start with the front camera
     let analyzing = false; // Flag to prevent multiple simultaneous analyses
 
     function stopCurrentVideoStream() {
